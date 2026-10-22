@@ -33,7 +33,20 @@ It's a **remote** server: nothing to install or run. **No API key, no account, r
 claude mcp add --transport http forge https://theagentforge.io/mcp/public
 ```
 
-**Cursor:** this repo is a Cursor plugin (`.cursor-plugin/plugin.json`, `mcp.json`). Or add to `~/.cursor/mcp.json`:
+**Gemini CLI**
+```sh
+gemini extensions install https://github.com/theagentforge/forge-mcp
+```
+
+**Codex, ChatGPT, GitHub Copilot, Kiro, Cursor:** this repo is an [Agent Plugins 1.0](https://agent-plugins.org)
+package (`plugin.json`, `mcp.json`, `skills/forge/`) with no hooks: the remote server and the `forge` skill only.
+Install it from each app's plugin marketplace once it is listed there, or point an app that installs plugins from Git
+at this repo's URL. In Copilot CLI, once it is listed in awesome-copilot:
+```sh
+copilot plugin install the-agent-forge@awesome-copilot
+```
+
+**Cursor:** this repo is also a Cursor plugin (`.cursor-plugin/plugin.json`, `.mcp.json`). Or add to `~/.cursor/mcp.json`:
 ```json
 { "mcpServers": { "the-agent-forge": { "url": "https://theagentforge.io/mcp/public" } } }
 ```
@@ -58,5 +71,14 @@ claude mcp add --transport http forge https://theagentforge.io/mcp/public
 This repository holds the connection files for directories and clients, under the MIT licence. The service itself
 runs at theagentforge.io. Its source is published for audit at
 [theagentforge/agent-forge](https://github.com/theagentforge/agent-forge).
+
+| Files | Read by |
+|---|---|
+| `plugin.json`, `mcp.json`, `skills/forge/SKILL.md` | Agent Plugins 1.0 clients (Codex, ChatGPT, Copilot, VS Code, Kiro, Cursor) |
+| `gemini-extension.json`, `GEMINI.md`, `skills/` | Gemini CLI |
+| `.cursor-plugin/plugin.json`, `.mcp.json` | Cursor, Grok Build, Claude Code |
+
+No hooks, scripts or binaries. The only network endpoint is `https://theagentforge.io/mcp/public`, and it needs no
+credentials.
 
 Privacy: <https://theagentforge.io/privacy> · Terms: <https://theagentforge.io/terms> · Contact: hello@theagentforge.io
