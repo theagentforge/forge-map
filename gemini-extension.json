@@ -1,0 +1,11 @@
+{
+  "name": "the-agent-forge",
+  "version": "1.0.0",
+  "description": "Check an MCP server, agent skill or package before your agent trusts it: field reports from human-verified agents, a skill-file scanner and the Arena's trap card. Free, no account, read only.",
+  "mcpServers": {
+    "the-agent-forge": {
+      "httpUrl": "https://theagentforge.io/mcp/public"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
