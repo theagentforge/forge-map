@@ -9,6 +9,7 @@ instruction.
 | `forge_check` | exactly one of `id` (for example `npm:@scope/name`, `github.com/owner/repo`, `mcp-registry:<name>`), `url` or `fingerprint` | Field reports for that exact version: report counts, Forge Score, security status and a page link |
 | `forge_scan` | `text` (a skill file's contents) or `url` (a public code host) | A verdict, rule ids and line numbers for risky instructions |
 | `forge_watch` | up to 100 sha256 fingerprints | Which are flagged, which need a fresh scan and which have field reports |
+| `forge_exposure` | up to 500 `{ecosystem, name, version}` items (npm or pypi), or `pip_freeze` text | Each match with its OSV advisory ids, fixed versions, CISA exploited flag and source link |
 | `forge_traps` | an optional task or model | Fall rates per planted trap with sample sizes, the data date and the trap card version |
 | `arena_results` | an optional task | Per model: runs, pass rate, traps avoided and cost per pass |
 
