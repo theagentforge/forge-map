@@ -22,8 +22,8 @@ Add it under MCP Servers → Remote Servers with the URL above. Or add this to `
 ```
 
 ## Check it works
-List the server's tools. You should see `forge_check`, `forge_scan`, `forge_watch`, `forge_traps` and
-`arena_results`. Then call `forge_check` with `{"id": "npm:@modelcontextprotocol/server-filesystem"}`. It returns
+List the server's tools. You should see `forge_check`, `forge_scan`, `forge_watch`, `forge_exposure`,
+`forge_traps` and `arena_results`. Then call `forge_check` with `{"id": "npm:@modelcontextprotocol/server-filesystem"}`. It returns
 field reports for that package as structured data.
 
 ## Troubleshooting
